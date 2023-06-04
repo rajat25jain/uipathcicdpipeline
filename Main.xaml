@@ -43,7 +43,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,6 +78,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Compass Login" sap:VirtualizedContainerService.HintSize="628,1636" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -91,7 +92,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[mydatatable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="586,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Regex&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Regex&gt;price&quot;:&quot;(\d+)&quot;}}&lt;/Regex&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Regex&gt;\d\d?Beds?\d.?\d?Baths?&lt;/Regex&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Regex&gt;(-?|\d+,?\d+)Sq&lt;/Regex&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[mydatatable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="586,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Regex&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Regex&gt;price&quot;:&quot;(\d+)&quot;}}&lt;/Regex&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Regex&gt;\d\d?Beds?\d.?\d?Baths?&lt;/Regex&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Regex&gt;(-?|\d+,?\d+)Sq&lt;/Regex&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:ReadTextFile Content="[mytext]" DisplayName="Read Text File" FileName="C:\Users\212809133\Desktop\hoteldata.txt" sap:VirtualizedContainerService.HintSize="586,80.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[mydatatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,1324.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
@@ -115,11 +116,7 @@
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,766.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Int32" Name="counter">
-                        <Variable.Default>
-                          <Literal x:TypeArguments="x:Int32" Value="1" />
-                        </Variable.Default>
-                      </Variable>
+                      <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -153,7 +150,7 @@
                                 <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[counter]" />
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[counter.ToString+&quot;hi&quot;]" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEach.Body>
